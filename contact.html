@@ -21,7 +21,65 @@
          </ul>
     </nav>
     <main>
+        <!-- HTML fors let users enter information into your site-->
+         <!-- forms require two attributes to tell them how to submit:
+                    action tells the form where to go (what page)
+                    method tells the form how to send the information
+                        the post method send the information in an encrypted package
+                        the get method sends information unencrypted in the browser -->
+         <form action="contact.html" method="get">
+            <section>
+            <!-- to link the label with the input, 
+             use 'for' on the label matching the 'id' on the input -->
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name"> 
 
+            <!-- with input, you can specify different types -->
+             <label for="email">Email:</label>
+             <input id="email" type="text" name="email"> 
+             </section>
+             <section>
+                <!-- the sections are block elements, so those elements will appear on the next line -->
+                 <label for="pass">Password:</label>
+                 <input type="password" id="pass" name="pass">
+
+                 <label for="when">Birthdate:</label>
+                 <input type="date" id="when" name="when">
+
+                 <label for="how">How many?</label>
+                 <input type="number" id="how" min="10" max="30" name="how">
+
+                 <label for="favorite">Favorite color:</label>
+                 <input type="color" id="favorite">
+             </section>
+
+             <section>
+                <!-- to make a dropdown menu, use the select tag -->
+                 <label for="colours">Colour?</label>
+                 <select id="value" name="colours">
+                    <option>Blue</option>
+                    <option>Red</option>
+                    <option selected>Yellow</option>
+                 </select>
+
+                 <!-- radio buttons operate as a set - check one, and the others uncheck-->
+                  <label for="one">1</label>
+                  <input type="radio" name="howmany" id="one" value="1">
+
+                  <label for="two">2</label>
+                  <input type="radio" name="howmany" id="one" value="2">
+
+                  <label for="three">3</label>
+                  <input type="radio" name="howmany" id="one" value="3">
+             </section>
+
+             <section>
+                <!-- to submit a form, add a submit bouton
+                 this button will submit everything contained inside one for tad-->
+                 <!-- the value attribute displays text on the button-->
+                  <input type="submit" value="Submit The Form" name="submit">
+             </section>
+         </form>
     </main>
     <footer>
 
